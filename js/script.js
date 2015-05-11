@@ -24,18 +24,55 @@
 		function showLocation(position) {            
 			var coords = position.coords;
 			directionsDisplay = new google.maps.DirectionsRenderer();			
-			var cefet =  new google.maps.LatLng(-19.9385953,-43.9999274);
-			var destino = new google.maps.LatLng(coords.latitude,coords.longitude);
+			var cefet =  new google.maps.LatLng(-19.9385953,-43.9999274); 
+			var pm = new google.maps.LatLng(-19.9243838,-43.9350508); /*parque*/
+			var sp = new google.maps.LatLng(-19.9286682,-43.947037); /*shopping*/
+			var casa = new google.maps.LatLng(-19.9385236,-43.9907427); 
+			var origem = new google.maps.LatLng(coords.latitude,coords.longitude);
+			var diadasemana = new Array(7);
+			diadasemana[0] = "Domingo";
+			diadasemana[1] = "Segunda-feira";
+			diadasemana[2] = "Terca-feira";
+			diadasemana[3] = "Quarta-feira";
+			diadasemana[4] = "Quinta-feira";
+			diadasemana[5] = "Sexta-feira";
+			diadasemana[6] = "Sabado";
+			d = DiadeHoje()+4;
+			var hoje = diadasemana[d];
+			var hora = Dia().getHours();
+			var minuto = Dia().getMinutes();	
+			if (d>0 && d<6){
+				alert('Hoje é '+hoje);
+				if(hora>=7 && hora<18){
+					destino = cefet;
+				    alert('e a essa hora('+hora+':'+minuto+') pode me encontrar no CEFET');
+				}
+				if((hora>=18) || (hora>=0 && hora<7)){
+					destino = casa;
+				    alert('e a essa hora ('+hora+':'+minuto+') pode me encontrar em casa');
+				}
+			}
+			else if (d==0){
+				alert('Hoje é '+hoje+" pode me encontrar no shopping");
+				destino = sp;
+			}
+			else if (d==6){
+				alert('Hoje é '+hoje+" pode me encontrar no parque");
+				destino = pm;
+			}
+			else{
+				destino = cefet;
+			}
 			
 			var mapOptions = {
-			  center: cefet,
-			  zoom: 16,
+			  center: destino,
+			  zoom: 15,
 			  mapTypeId: google.maps.MapTypeId.ROADMAP
 			};			
 			var mapDiv = document.getElementById('mapdiv');			
 			map = new google.maps.Map(mapDiv, mapOptions);
 			directionsDisplay.setMap(map);
-			calcRoute(cefet,destino);			
+			calcRoute(origem,destino);			
 		}
 
          function errorHandler(err) {
@@ -55,21 +92,16 @@
                window.location.href = 'http://browsehappy.com/';
             }
          }
- /*Minha Localizacao = Latitude : -19.938523699999998
- Longitude: -43.9907427*/
- 
- /*Localizacao do Cefet = Latitude : -19.9385953
- Longitude: -43.9999274*/
+		 		 
+		 function DiadeHoje(){
+			var D = new Date();			
+			dia = D.getDay();			
+			return dia;
+		}
+		function Dia(){
+			var D = new Date();					
+			return D;
+		}
+	
 
 /*https://developers.google.com/maps/documentation/javascript/directions*/
-
-
-
-
-
-
-
-
-
-
-
