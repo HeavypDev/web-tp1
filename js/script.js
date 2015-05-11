@@ -103,5 +103,5 @@
 			return D;
 		}
 	
-
+			
 /*https://developers.google.com/maps/documentation/javascript/directions*/

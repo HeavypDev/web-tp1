@@ -148,6 +148,25 @@
 								
 								Voce pode entrar em contato através das redes sociais.
 								
+								<div id="fb-root"></div>
+								<script>(function(d, s, id) {
+								  var js, fjs = d.getElementsByTagName(s)[0];
+								  if (d.getElementById(id)) return;
+								  js = d.createElement(s); js.id = id;
+								  js.src = "https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3&appId=825226937566688";
+								  fjs.parentNode.insertBefore(js, fjs);
+								}(document, 'script', 'facebook-jssdk'));
+								</script>
+								<div class="fb-like" 
+								data-href="http://heavypdev.github.io/web-tp1/" 
+								data-layout="standard" data-action="like"
+								data-show-faces="false" data-share="true"
+								style="width:70px !important;height:70px !important;"></div>
+								
+								
+								<!-- Posicione esta tag onde você deseja que o botão +1 apareça. -->
+								<div class="g-plusone" data-annotation="inline" data-width="300"></div>
+								
 								O CEFET-MG é o lugar onde pode me encontrar, no mapa abaixo
 								você descobre como chegar a partir do seu local.
 								<br><br>
@@ -155,14 +174,17 @@
 								<div id="mapdiv">
 									<button id="mapload_button" onclick="getLocation()" >Carregar mapa aqui..</button>
 								</div>
-								<button onclick="DiadeHoje()">DIA</button>
+								
 						</div>
 			        </div>
 				</div>			
 			</section>			
 			 
 		</main>
-		
+		<!-- Posicione esta tag no cabeçalho ou imediatamente antes da tag de fechamento do corpo. -->
+		<script src="https://apis.google.com/js/platform.js" async defer>
+		  {lang: 'pt-BR'}
+		</script>
 	</body>
 	<script src="https://maps.googleapis.com/maps/api/js"></script>	
 	<script src="js/script.js"></script>	
