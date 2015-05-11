@@ -5,9 +5,17 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="estilo.css">
+		<style>
+		  #mapdiv {
+			width: 500px;
+			height: 400px;
+			background-color: #CCC;
+			border: 1px solid black;
+		  }
+    </style>
 	</head>
 
-	<body>		
+	<body >		
 		<ul id="menutop_div">		
 				<li class="topMenuItem">
 					<a href="#secao-1" class="on">Inicial</a>
@@ -55,14 +63,14 @@
 							e organizaçao de uma dieta, de forma que o usuário possa acompanhar sua alimentação ao longo de um mês
 							seguindo uma dieta previamente prescrita.
 
-							<img src="img/dd2_small.jpg" alt="Dieta Diaria"></img>
+							<img src="img/dd2_small.jpg" id="dieta" alt="Dieta Diaria"></img>
 
 							<h4>Melhoramento no algoritmo de comparação de proteínas </h4> 
 
 							Como trabalho de conclusão de curso foi desenvolvido um método de comparação de proteínas para que possa ser
 							usado como melhoramento dos algoritmos de sobreposição existentes.
 
-							<img src="img/proteina_small.jpg" alt="Proteina 4q5z"></img>
+							<img src="img/proteina_small.jpg" id="proteina" alt="Proteina 4q5z"></img>
 							
 							
 							<h3>Futuros</h3>
@@ -72,15 +80,15 @@
 							Inicialmente o interesse é um estágio como forma de
 							enriquecimento profissional e posteriormente a atuação em uma empresa de tecnologia. 
 
-							<img src="img/mercadotrabalho_small.jpg" alt="Mercado de Trabalho"></img>
-
+							<img src="img/mercadotrabalho_small.jpg" id="mercado" alt="Mercado de Trabalho"></img>
+							<button onclick="BIGPIC('img/mercadotrabalho_small.jpg')" >BIG</button>
 							
 							<h4>Carteira de Motorista</h4>
 							Outro projeto pessoal que será posto em prática é a habilitação para conduzir veículos automotores (CNH). Uma 
 							necessidade antiga que agora terá mais tempo para ser realizada.
 
-							<img src="img/cnh_small.jpg" alt="Carteira de Habilitacao"></img>
-							<img src="img/carro_small.jpeg" alt="Carro"></img>
+							<img src="img/cnh_small.jpg" id="cnh" alt="Carteira de Habilitacao"></img>
+							<img src="img/carro_small.jpeg" id="carro" alt="Carro"></img>
 							
 
 							<h4>Certificação em Inglês</h4>
@@ -89,8 +97,8 @@
 							é a de língua estrangeira. Em um mundo tão conectado e globalizado como o atual é imprescindível ter
 							uma segunda lingua e uma comprovação através da certificação se faz necessária. 
 
-							<img src="img/ingles_small.jpg" alt="Voce fala ingles?"></img>
-							
+							<img src="img/ingles_small.jpg" id="ingles" alt="Voce fala ingles?"></img>
+														
 						</div>
 					</div>
 				</div>
@@ -138,6 +146,16 @@
 						<div class="hsContent">
 							<h2>Contato</h2>
 								
+								Voce pode entrar em contato através das redes sociais.
+								
+								O CEFET-MG é o lugar onde pode me encontrar, no mapa abaixo
+								você descobre como chegar a partir do seu local.
+								<br><br>
+
+								<div id="mapdiv">
+									<button id="mapload_button" onclick="getLocation()" >Carregar mapa aqui..</button>
+								</div>
+								
 						</div>
 			        </div>
 				</div>			
@@ -146,7 +164,8 @@
 		</main>
 		
 	</body>
-		
+	<script src="https://maps.googleapis.com/maps/api/js"></script>	
+	<script src="js/script.js"></script>	
 	
 
 </html>
