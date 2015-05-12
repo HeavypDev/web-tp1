@@ -1,15 +1,98 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-	
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="estilo.css">
-
-  </head>
+	<head>
   
-  <body>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../css/estilo.css">
+		
+		<!--Font--->
+		<link href='http://fonts.googleapis.com/css?family=Quicksand:700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Palanquin:600' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Simonetta:900' rel='stylesheet' type='text/css'>
+		
+		<!--Bootstrap-->	
+		<link href="../css/bootstrap.css" rel="stylesheet">
+		<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.js"></script>
+		
+		<!-- Posicione esta tag no cabeçalho ou imediatamente antes da tag de fechamento do corpo. -->
+		<script src="https://apis.google.com/js/platform.js" async defer>
+		  {lang: 'pt-BR'}
+		</script>	
+		<script src="https://maps.googleapis.com/maps/api/js"></script>	
+		<script src="../js/script.js"></script>
+	
+	</head>
+  
+  <body class="bg">
+  
+  		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			 <!--<a href="#secao-1" class="pull-left" ><img id="logo" src="img/logo1.jpg"></a>-->
+			</div>
+			<div>
+			  <ul class="nav navbar-nav">
+				<li><a href="../index.html">Inicial</a></li>
+				<li><a href="../projetos/projetos.html">Projetos</a></li>
+				<li><a href="../cv/cv.html">Curriculo</a></li>
+				<li class="active"><a href="../contato/contato.html">Contato</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+		
+		
+		 <div class="container">	
+			
+			<div class="col-md-6 col-md-offset-1">
+	
+				<h2>Contato</h2>
+				
+				<p>Voce pode entrar em contato através das redes sociais.</p>
+									
+					<a href="http://www.facebook.com/alan.pinho.54" alt="Facebook">
+					<img id="social_face" class="botaosocial" src="../img/facebook.jpg"></a>
+					
+					<a href=" http://plus.google.com/u/0/104838199678047337898/posts" alt="Google+">
+					<img id="social_gmais" class="botaosocial" src="../img/googlelogo2.jpg"></a>
+					
+					<a href="http://www.github.com/heavypdev" alt="GitHub">
+					<img id="social_github" class="botaosocial" src="../img/githublogo1.png"></a>
+					
+					<a href="mailto:alanpinho.etec@gmail.com" alt="GMail">
+					<img id="social_gmail" class="botaosocial" src="../img/gmaillogo2.png"></a>
+					
+					<!-- Posicione esta tag onde você deseja que o botão +1 apareça. -->
+					<div class="g-plusone" data-width="300"></div>
+					
+						<p>No mapa abaixo você descobre onde me encontrar e como chegar a partir do seu local.</p>	
+						
+						<div id="mapdiv" style="width:500px;height:400px;background-color:#CCC;border: 1px solid grey;">
+							<button id="mapload_button" onclick="getLocation()" >Carregar mapa aqui..</button>
+						</div>
+					
+					<div id="fb-root"></div>
+						<script>(function(d, s, id) {
+						  var js, fjs = d.getElementsByTagName(s)[0];
+						  if (d.getElementById(id)) return;
+						  js = d.createElement(s); js.id = id;
+						  js.src = "https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3&appId=825226937566688";
+						  fjs.parentNode.insertBefore(js, fjs);
+						}(document, 'script', 'facebook-jssdk'));
+						</script>
+					<div class="fb-like" 
+					data-href="http://heavypdev.github.io/web-tp1/" 
+					data-layout="standard" data-action="like"
+					data-show-faces="false" data-share="true"
+					style="width:70px !important;height:70px !important;"></div>
+					
+					<br><br><br><br><br>	
+			</div>				
+		</div>		
   
   </body>
   

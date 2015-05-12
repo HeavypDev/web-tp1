@@ -1,3 +1,5 @@
+
+/*FUNCOES PARA A GEOLOCALIZACAO*/
 		var directionsDisplay;
 		var directionsService = new google.maps.DirectionsService();
 		var map;
@@ -37,7 +39,7 @@
 			diadasemana[4] = "Quinta-feira";
 			diadasemana[5] = "Sexta-feira";
 			diadasemana[6] = "Sabado";
-			d = DiadeHoje()+4;
+			d = DiadeHoje();
 			var hoje = diadasemana[d];
 			var hora = Dia().getHours();
 			var minuto = Dia().getMinutes();	
@@ -45,19 +47,19 @@
 				alert('Hoje é '+hoje);
 				if(hora>=7 && hora<18){
 					destino = cefet;
-				    alert('e a essa hora('+hora+':'+minuto+') pode me encontrar no CEFET');
+				    alert('e a essa hora ('+hora+'h e'+minuto+'m) do dia, podes me encontrar no CEFET');
 				}
 				if((hora>=18) || (hora>=0 && hora<7)){
-					destino = casa;
-				    alert('e a essa hora ('+hora+':'+minuto+') pode me encontrar em casa');
+					alert('e a essa hora ('+hora+'h e'+minuto+'m) da noite, podes me encontrar em CASA');
+					destino = casa;				    
 				}
 			}
 			else if (d==0){
-				alert('Hoje é '+hoje+" pode me encontrar no shopping");
+				alert('Hoje é '+hoje+"! podes me encontrar no SHOPPING");
 				destino = sp;
 			}
 			else if (d==6){
-				alert('Hoje é '+hoje+" pode me encontrar no parque");
+				alert('Hoje é '+hoje+"! podes me encontrar no PARQUE");
 				destino = pm;
 			}
 			else{
@@ -102,6 +104,29 @@
 			var D = new Date();					
 			return D;
 		}
-	
-			
-/*https://developers.google.com/maps/documentation/javascript/directions*/
+				
+/*FONTE:: */  /*https://developers.google.com/maps/documentation/javascript/directions*/
+
+/*FIM // FUNCOES PARA A GEOLOCALIZACAO*/
+/*
+function GetCurrentPageName() { 
+	//method to get Current page name from url. 
+	var PageURL = document.location.href; 
+	var PageName = PageURL.substring(PageURL.lastIndexOf('/') + 1); 
+	return PageName.toLowerCase();
+} 
+	$(document).ready(function(){
+		var CurrPage = GetCurrentPageName();		 
+		switch(CurrPage){
+		case 'index.php':
+		 $('#li_home').addClass('active') ;
+		 break;
+		case 'about.php':
+		 $('#li_about').addClass('active') ;
+		 break;
+		case 'contact.php':
+		 $('#li_cont').addClass('active') ;
+		 break;
+		}
+	});
+*/

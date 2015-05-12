@@ -1,17 +1,84 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+	<head>
   
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../estilo.css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../css/estilo.css">
 
-  </head>
+		<!--Font--->
+		<link href='http://fonts.googleapis.com/css?family=Quicksand:700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Palanquin:600' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Simonetta:900' rel='stylesheet' type='text/css'>
+		
+		<!--Bootstrap-->	
+		<link href="../css/bootstrap.css" rel="stylesheet">
+		<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.js"></script>
+		
+		<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="../js/amcharts.js"></script>
+		<script type="text/javascript" src="../js/pie.js"></script>
+		<script type="text/javascript" src="../js/chart.js"></script>		
+		<script src="../js/script.js"></script>
+	
+	</head>
   
-  <body>
+  <body class="bg">
   
+  		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			</div>
+			<div>
+			  <ul class="nav navbar-nav">
+				<li><a href="../index.html">Inicial</a></li>
+				<li><a href="../projetos/projetos.html">Projetos</a></li>
+				<li  class="active"><a href="cv.html">Curriculo</a></li>
+				<li><a href="../contato/contato.html">Contato</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+		
+		<div class="container">		
+			<div class="col-md-7 col-md-offset-1">
+				<h2>Currículo</h2>
+											
+				<h3>Objetivo Profissional</h3>
+				<p>Ingressar no mercado de trabalho, incialmente desempenhando a função de estagiário, em 
+				empresa de tecnologia.</p> 
+				
+				<h3>Formação Acadêmica</h3>
+				<p>
+				<ul>
+					<li>Técnico em Microinformática - SENAI-MG (Concluído)</li>
+					<li>Engenharia de Computação - CEFET-MG (em andamento)</li>								
+				</ul>
+				</p>
+				
+				<h3>Experiência Profissional</h3>
+				<p>
+				<ul>
+					<li>Manutenção de Computadores e Apoio ao Usuário - CEFET-MG</li>
+					<li>Tutor a distância do curso de Informática para Internet - CEFET-MG</br>
+					</li>
+				</ul>
+				</p>
+				
+				<h3>Principais Linguagens e ferramentas utilizadas</h3>
+				<div id="chartdiv" style="width: 85%; height: 300px; background-color: #FFFFFF;" ></div>
+				
+				<p>Download: <a href="../cv/curriculo.pdf" alt="Curriculo Completo"><i>VERSÃO COMPLETA</i></a></p>
+			</div>
+		</div>			
+
+	
   </body>
+  
+  
   
   <script>
 

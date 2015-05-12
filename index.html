@@ -4,190 +4,64 @@
 	<head>  
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="estilo.css">
-		<style>
-		  #mapdiv {
-			width: 500px;
-			height: 400px;
-			background-color: #CCC;
-			border: 1px solid black;
-		  }
-    </style>
-	</head>
-
-	<body >		
-		<ul id="menutop_div">		
-				<li class="topMenuItem">
-					<a href="#secao-1" class="on">Inicial</a>
-				</li>
-				<li class="topMenuItem">
-					<a href="#secao-2" >Projetos</a>
-				</li>
-				<li class="topMenuItem">
-					<a href="#secao-3" >Curriculo</a>
-				</li>
-				<li class="topMenuItem">
-					<a href="#secao-4" >Contato</a>
-				</li>
-		</ul>
+		<title>Página Pessoal - Alan G Pinho</title>
 		
-		<main>
-			 <!-- Section 1 - Inicial -->
-			<section id="secao-1" class="homesecao">
-				<div class="bcg"				  
-				  data-anchor-target="#secao-1"
-				>
-					<div class="hsContainer">
-						<div class="hsContent"
-							data-anchor-target="#secao-1 h2"
-						>
-							<h2>Sobre Mim</h2>
-							<p>Estudante de Engenharia de Computação, aficionado por tecnologia, amante de música.</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			 
-			<!-- Section 2 -->
-			
-			<section id="secao-2" class="homesecao">
-				<div class="bcg" data-anchor-target="#secao-2">
-					<div class="hsContainer">
-						<div class="hsContent" >
-							
-							<h2>Projetos</h2>
-							<h3>Realizados</h3>
-							<h4>Dieta Diária</h4> 
-
-							Projeto desenvolvido para o curso Student to Business. Foi criado um app para Windows 8 para controle 
-							e organizaçao de uma dieta, de forma que o usuário possa acompanhar sua alimentação ao longo de um mês
-							seguindo uma dieta previamente prescrita.
-
-							<img src="img/dd2_small.jpg" id="dieta" alt="Dieta Diaria"></img>
-
-							<h4>Melhoramento no algoritmo de comparação de proteínas </h4> 
-
-							Como trabalho de conclusão de curso foi desenvolvido um método de comparação de proteínas para que possa ser
-							usado como melhoramento dos algoritmos de sobreposição existentes.
-
-							<img src="img/proteina_small.jpg" id="proteina" alt="Proteina 4q5z"></img>
-							
-							
-							<h3>Futuros</h3>
-							
-							<h4>Ingressar no mercado de trabalho</h4>
-							
-							Inicialmente o interesse é um estágio como forma de
-							enriquecimento profissional e posteriormente a atuação em uma empresa de tecnologia. 
-
-							<img src="img/mercadotrabalho_small.jpg" id="mercado" alt="Mercado de Trabalho"></img>
-							<button onclick="BIGPIC('img/mercadotrabalho_small.jpg')" >BIG</button>
-							
-							<h4>Carteira de Motorista</h4>
-							Outro projeto pessoal que será posto em prática é a habilitação para conduzir veículos automotores (CNH). Uma 
-							necessidade antiga que agora terá mais tempo para ser realizada.
-
-							<img src="img/cnh_small.jpg" id="cnh" alt="Carteira de Habilitacao"></img>
-							<img src="img/carro_small.jpeg" id="carro" alt="Carro"></img>
-							
-
-							<h4>Certificação em Inglês</h4>
-
-							Uma das principais certificações exigidas atualmente pelo mercado, principalmente na área de tecnologia
-							é a de língua estrangeira. Em um mundo tão conectado e globalizado como o atual é imprescindível ter
-							uma segunda lingua e uma comprovação através da certificação se faz necessária. 
-
-							<img src="img/ingles_small.jpg" id="ingles" alt="Voce fala ingles?"></img>
-														
-						</div>
-					</div>
-				</div>
-			</section>
-			
-			<!-- Section 3 -->
-			
-			<section id="secao-3" class="homesecao">
-			
-				<div class="bcg" data-anchor-target="#secao-3">
-					<div class="hsContainer">
-						<div class="hsContent">
-							<h2>Currículo</h2>
-														
-							<h3>Objetivo Profissional</h3>
-							Ingressar no mercado de trabalho, incialmente desempenhando a função de estagiário, em 
-							empresa de tecnologia. 
-							
-							<h3>Formação Acadêmica</h3>
-							<ul>
-								<li>Técnico em Microinformática - SENAI-MG (Concluído)</li>
-								<li>Engenharia de Computação - CEFET-MG (em andamento)</li>								
-							</ul>
-
-							
-							<h3>Experiência Profissional</h3>
-							<ul>
-								<li>Manutenção de Computadores e Apoio ao Usuário - CEFET-MG</li>
-								<li>Tutor a distância do curso de Informática para Internet - CEFET-MG</br>
-                                </li>
-							</ul>
-							
-							Download da versao Completa: <a href="cv/curriculo.pdf" alt="Curriculo Completo">LINK</a>
-							
-						</div>
-			        </div>
-				</div>			
-			</section>			
-			
-			<!-- Section 4 -->
-			 
-			 <section id="secao-4" class="homesecao">			
-				<div class="bcg" data-anchor-target="#secao-3">
-					<div class="hsContainer">
-						<div class="hsContent">
-							<h2>Contato</h2>
-								
-								Voce pode entrar em contato através das redes sociais.
-								
-								<div id="fb-root"></div>
-								<script>(function(d, s, id) {
-								  var js, fjs = d.getElementsByTagName(s)[0];
-								  if (d.getElementById(id)) return;
-								  js = d.createElement(s); js.id = id;
-								  js.src = "https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3&appId=825226937566688";
-								  fjs.parentNode.insertBefore(js, fjs);
-								}(document, 'script', 'facebook-jssdk'));
-								</script>
-								<div class="fb-like" 
-								data-href="http://heavypdev.github.io/web-tp1/" 
-								data-layout="standard" data-action="like"
-								data-show-faces="false" data-share="true"
-								style="width:70px !important;height:70px !important;"></div>
-								
-								<br><br><br>
-								<!-- Posicione esta tag onde você deseja que o botão +1 apareça. -->
-								<div class="g-plusone" data-width="300"></div>
-								
-								O CEFET-MG é o lugar onde pode me encontrar, no mapa abaixo
-								você descobre como chegar a partir do seu local.
-								<br><br>
-
-								<div id="mapdiv">
-									<button id="mapload_button" onclick="getLocation()" >Carregar mapa aqui..</button>
-								</div>
-								
-						</div>
-			        </div>
-				</div>			
-			</section>			
-			 
-		</main>
+	    <link rel="stylesheet" href="css/estilo.css">		
+	
+		<!--Font--->
+		<link href='http://fonts.googleapis.com/css?family=Quicksand:700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Palanquin:600' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Simonetta:900' rel='stylesheet' type='text/css'>
+		 
+		<!--Bootstrap-->	
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		
 		<!-- Posicione esta tag no cabeçalho ou imediatamente antes da tag de fechamento do corpo. -->
 		<script src="https://apis.google.com/js/platform.js" async defer>
 		  {lang: 'pt-BR'}
 		</script>
-	</body>
-	<script src="https://maps.googleapis.com/maps/api/js"></script>	
-	<script src="js/script.js"></script>	
-	
+				<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="js/amcharts.js"></script>
+		<script type="text/javascript" src="js/pie.js"></script>
+		<script type="text/javascript" src="js/chart.js"></script>		
+		<script src="https://maps.googleapis.com/maps/api/js"></script>	
+		<script src="js/script.js"></script>
+		
+	</head>
 
+	<body class="bg">		
+	
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			</div>
+			<div>
+			  <ul class="nav navbar-nav">
+				<li class="active"><a href="index.html">Inicial</a></li>
+				<li><a href="projetos/projetos.html">Projetos</a></li>
+				<li><a href="cv/cv.html">Curriculo</a></li>
+				<li><a href="contato/contato.html">Contato</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+
+		<div class="container" id="conteudo-inicio">
+			<div class="col-md-8 col-md-offset-1">
+				<p id="p_inicio">Estudante de Engenharia de Computação, aficionado por tecnologia, amante de música.</p>												
+				
+			</div>
+		</div>
+				<div id="quote">
+					<q title='"A mente aberta para uma nova ideia jamais retorna ao seu tamanho original."'>
+					One's mind, once streched by a new idea, never regains its original dimensions.<br>
+					-- Oliver Wendell Holmes. Jr.</q>
+				</div>
+				<a href="contato/contato.html" title="Alan G Pinho" alt="Logo"><img id="logo" src="img/logo1.jpg"></a>	
+	</body>
+		
+	
 </html>
