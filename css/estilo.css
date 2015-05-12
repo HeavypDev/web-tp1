@@ -96,21 +96,19 @@ img#logo {
 	font-family: 'Quicksand', sans-serif;
 	position:absolute;
 	right: 20%;
-    bottom: 5%;
+    	bottom: 5%;
 	text-align: right;
 	width: 40%;
 	margin: 0 auto;
 }
 
-.fb-like, .g-plusone{
-    position:absolute;
-    display: block;
-    top: 20%;
-    right: 5%;
-    bottom: 5%;
-    text-align: right;
-    width: 40%;
-    margin: 0 auto;
+#fb-root, #fb-like, .g-plusone{
+	position: relative;
+	display: block;
+	left: 5%;
+    	bottom: 5%;
+	top:95%;
+	margin: 0 auto;
 }
 
 #conteudo-inicio{
@@ -128,8 +126,8 @@ img#logo {
     border: 2px solid #def;
     border-radius: 100%;
     text-align: center;
-
 }
+
 #chartdiv{
 	position: relative;
 	left: 8%;
